@@ -8,7 +8,7 @@ Install Dependencies:
 
 1. NodeJS( ~> 6.2.2 )
 
-   `brew update && brew install node`
+   `$ brew update && brew install node`
 
 2. npm( ~> 3.10.3 )
 
@@ -16,15 +16,30 @@ Install Dependencies:
 
     `npm install -g rnpm`
 
-And run it
+In iOS platform, `Xcode` is needed.
 
-1. `git clone git@github.com:80percent/mobx-react-native-template.git`
-2. `npm install`
-3. `cp app/config/index.js.example ap/config/index.js`
-4. `react-native run-ios` or `react-native run-android`
+In Android platfrom, `Android studio` or `Genymotion` is needed.
+
+After finish install dependencies.
+
+Then lauch it
+
+1. `$ git clone git@github.com:80percent/mobx-react-native-template.git && cd mobx-react-native-template`
+2. `$ npm install`
+3. `$ react-native upgrade`
+4. `$ rnpm link`
+5. `$ cp app/config/index.js.example ap/config/index.js`
+6. `$ react-native run-ios` or `react-native run-android`
+
+Done.
 
 You need start an iOS simulator or android simulator before running your app, see more: https://facebook.github.io/react-native/docs/getting-started.html
 
+## Mobx advantage
+
+[Mobx](https://github.com/mobxjs/mobx) is a new architecture to manage your store data. Unlike redux or flux, there's just a fewer concepts to understand and it's very simple to use.
+
+See more usage into the directory `app/`.
 
 ## Some Advice
 
