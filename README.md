@@ -28,7 +28,7 @@ Then lauch it
 2. `$ npm install`
 3. `$ react-native upgrade`
 4. `$ rnpm link`
-5. `$ cp app/config/index.js.example ap/config/index.js`
+5. `$ cp app/config/index.js.example app/config/index.js`
 6. `$ react-native run-ios` or `react-native run-android`
 
 Done.
