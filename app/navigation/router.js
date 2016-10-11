@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, TouchableOpacity } from 'react-native'
 import NavigationBar from 'react-native-navbar'
 import TabNavigator from './tab_navigator'
 import tabStore from '../stores/tab_store'
@@ -15,9 +15,8 @@ export default {
 
     const renderLeftButton = () => {
       return (
-        <TouchableOpacity style={{flexDirection: 'row', paddingLeft: 10, alignItems: 'center'}} onPress={ ()=>{ navigator.pop() }}>
+        <TouchableOpacity style={{flexDirection: 'row', paddingHorizontal: 15, alignItems: 'center'}} onPress={ ()=>{ navigator.pop() }}>
           <Icon name="angle-left" size={25} />
-          <Text style={{marginLeft: 5}}>返回</Text>
         </TouchableOpacity>
       )
     }
