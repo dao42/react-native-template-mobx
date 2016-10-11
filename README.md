@@ -25,6 +25,7 @@ After finish install dependencies.
 Then lauch it
 
 1. `$ git clone git@github.com:80percent/mobx-react-native-template.git && cd mobx-react-native-template`
+2. `$ git remote rm origin`
 2. `$ npm install`
 3. `$ react-native upgrade`
 4. `$ rnpm link`
