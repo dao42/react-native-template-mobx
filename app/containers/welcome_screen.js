@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import ApplicationStyles from '../styles'
 
 @observer
-export default class WeclomeScreen extends Component {
+export default class WelcomeScreen extends Component {
   static propTypes = {
     counterStore: PropTypes.object.isRequired,
     navigator: PropTypes.object.isRequired
