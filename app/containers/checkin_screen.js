@@ -4,11 +4,13 @@ import Button from 'react-native-button'
 import Routes from '../navigation/routes'
 import { observer } from 'mobx-react/native'
 
+import ApplicationStyles from '../styles'
+
 @observer
 export default class CheckinScreen extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, ApplicationStyles.container]}>
         <Text style={styles.welcome} >
           CheckinScreen
         </Text>
@@ -25,7 +27,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
   welcome: {
     textAlign: 'center',

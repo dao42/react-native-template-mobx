@@ -28,11 +28,10 @@ export default {
     let view = <route.component {...route.store} navigator={navigator}/>;
 
     if(route.showTabBar){
-      view = <TabNavigator tabStore={tabStore} view={view} navigator={navigator}/>;
+      view = <TabNavigator view={view} navigator={navigator}/>;
     }
     return (
       <View style={{ flex: 1 }}>
-        <NavigationBar title={titleConfig} leftButton={leftButtonConfig} style={{backgroundColor: '#eee'}} statusBar={{tintColor: '#eee'}}/>
         {view}
       </View>
     )

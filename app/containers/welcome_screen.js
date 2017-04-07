@@ -15,7 +15,7 @@ export default class WelcomeScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, ApplicationStyles.container]}>
         <Icon style={styles.welcome} name="home" size={30} />
         <Text style={styles.text} >
           Welcome to Mobx React Native Template
@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
   welcome: {
     textAlign: 'center',

@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import Button from 'react-native-button'
 
+import ApplicationStyles from '../styles'
+
 export default class SecondScreen extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, ApplicationStyles.container]}>
         <Text style={styles.welcome}>
           Second Screen Container
         </Text>
@@ -22,7 +24,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
   welcome: {
     textAlign: 'center',
