@@ -18,7 +18,7 @@ export default class WelcomeScreen extends Component {
       <View style={styles.container}>
         <Icon style={styles.welcome} name="home" size={30} />
         <Text style={styles.text} >
-          Weclome to Mobx React Native Template
+          Welcome to Mobx React Native Template
         </Text>
         <Text style={styles.text} >
           Now counter is <Text style={styles.textRed}>{this.props.counterStore.counter}</Text>
