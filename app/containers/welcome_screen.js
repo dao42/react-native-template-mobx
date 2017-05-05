@@ -1,17 +1,20 @@
 import React, { Component, PropTypes } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import Button from 'react-native-button'
-import Routes from '../navigation/routes'
 import { observer } from 'mobx-react/native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import ApplicationStyles from '../styles'
 
+import counterStore from '../stores/counter_store'
+
 @observer
 export default class WelcomeScreen extends Component {
-  static propTypes = {
-    counterStore: PropTypes.object.isRequired,
-    navigator: PropTypes.object.isRequired
-  }
+  static navigationOptions = {
+    title: 'Home',
+    tabBarIcon: ({tintColor}) => (
+      <Icon name='home' color={tintColor} size={24}/>
+    )
+  };
 
   render() {
     return (
@@ -21,19 +24,19 @@ export default class WelcomeScreen extends Component {
           Welcome to Mobx React Native Template
         </Text>
         <Text style={styles.text} >
-          Now counter is <Text style={styles.textRed}>{this.props.counterStore.counter}</Text>
+          Now counter is <Text style={styles.textRed}>{counterStore.counter}</Text>
         </Text>
         <Text style={styles.text} >
-          Now remote counter is {this.props.counterStore.remoteCounter}
+          Now remote counter is {counterStore.remoteCounter}
         </Text>
-        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.counterStore.getFromRemote() }>
+        <Button style={ApplicationStyles.button} onPress={ ()=> counterStore.getFromRemote() }>
           Click to get api data
         </Button>
-        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.push(Routes.SecondScreen) }>
+        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigation.navigate('SecondScreen') }>
           Click to second screen
         </Button>
 
-        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigator.push(Routes.CounterScreen) }>
+        <Button style={ApplicationStyles.button} onPress={ ()=> this.props.navigation.navigate('CounterScreen') }>
           Click to counter screen
         </Button>
       </View>

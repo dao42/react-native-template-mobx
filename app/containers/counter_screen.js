@@ -5,13 +5,14 @@ import { observer } from 'mobx-react/native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import ApplicationStyles from '../styles'
 
+import counterStore from '../stores/counter_store'
+
 @observer
 export default class CounterScreen extends Component {
-
-  static propTypes = {
-    counterStore: PropTypes.object.isRequired,
-    navigator: PropTypes.object.isRequired,
-  }
+  static navigationOptions = {
+    tabBarVisible: false,
+    title: 'Counter Screen',
+  };
 
   render() {
     return (
@@ -20,14 +21,14 @@ export default class CounterScreen extends Component {
         <Text style={styles.text}>
           Counter Container Test
         </Text>
-        <Text style={styles.text}>Clicked: <Text style={styles.textRed}>{this.props.counterStore.counter}</Text> times</Text>
-        <Button style={ApplicationStyles.button} onPress={() => this.props.counterStore.increment()}>
+        <Text style={styles.text}>Clicked: <Text style={styles.textRed}>{counterStore.counter}</Text> times</Text>
+        <Button style={ApplicationStyles.button} onPress={() => counterStore.increment()}>
           |   +1   |
         </Button>
-        <Button style={ApplicationStyles.button} onPress={() => this.props.counterStore.incrementAsync()}>
+        <Button style={ApplicationStyles.button} onPress={() => counterStore.incrementAsync()}>
           |   +1 async  |
         </Button>
-        <Button onPress={ ()=> this.props.navigator.pop() }>
+        <Button onPress={ ()=> this.props.navigation.goBack() }>
           Back
         </Button>
       </View>

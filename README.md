@@ -1,8 +1,14 @@
 # Mobx React Native Template
 
-It's a nice beginning for a new react native project with mobx architecture from mobx-react-native-template.
+It's an experienced template for a new react native project with mobx architecture from react-native-template-mobx.
 
-## Howto
+这是一个有经验的 React Native 和 mobx 融合的脚手架项目.
+
+> Notice: This project has rename from `mobx-react-native-template` to `react-native-template-mobx` because of the convention of React Native Template published at React Native 0.43 version. here is the [link](https://github.com/facebook/react-native/commit/17c175a149bc410a9b167b31f13474d8c6e9832c#diff-e1bddafdbb592817072925c6b7aabcd2)
+
+> react-native-template-mobx has supported react native 0.44.
+
+## Prepare
 
 Install Dependencies:
 
@@ -10,31 +16,68 @@ Install Dependencies:
 
    `$ brew update && brew install node`
 
-2. npm( ~> 3.10.3 )
+2. yarn
+
+    `$ npm install -g yarn`
 
 3. rnpm
 
     `npm install -g rnpm`
 
-In iOS platform, `Xcode` is needed.
+On iOS platform, `Xcode` is needed.
 
-In Android platfrom, `Android studio` or `Genymotion` is needed.
+On Android platfrom, `Android studio` or `Genymotion` is needed.
 
-After finish install dependencies.
+After finish install dependencies, we can launch the template easily.
 
-Then lauch it
+## Install
 
-1. `$ git clone git@github.com:80percent/mobx-react-native-template.git && cd mobx-react-native-template`
-2. `$ git remote rm origin`
-2. `$ npm install`
-3. `$ react-native upgrade`
-4. `$ rnpm link`
-5. `$ cp app/config/index.js.example app/config/index.js`
-6. `$ react-native run-ios` or `react-native run-android`
+> Replace `xxx` to your real project name.
+
+1. `$ npm install -g react-native-cli`
+2. `$ react-native init xxx --template mobx`
+3. `$ cd xxx`
+3. `$ yarn add babel-plugin-transform-decorators-legacy --dev`
+4. `$ cat gitignore >> .gitignore; rm gitignore`
+
+At last, launch it to check.
+
+iOS:
+
+```bash
+react-native run-ios
+```
+
+Android:
+
+```bash
+react-native run-android
+```
 
 Done.
 
 You need start an iOS simulator or android simulator before running your app, see more: https://facebook.github.io/react-native/docs/getting-started.html
+
+
+## What it does
+
+We have developed several commercial native apps with React Native at the last year, the template is the key we can make them successfully.
+
+First, [mobx](https://github.com/mobxjs/mobx) is the key of the template. If you also love mobx, you should choose this template. with zero-configuration, you can use mobx.
+
+Second, we apply some useful react-native components for you, of course, zero configuration:
+
+* apisauce ( API provider )
+* react-native-button
+* react-native-vector-icons
+* react-navigation
+* react-native-smart-keyboard
+
+Third, we provide a nice directory construction for your new project, clean and clear.
+
+At last, we provide the most common tabbar routers example, see more detail into the directory `app/`.
+
+And we are improving the template continually.
 
 ## Mobx advantage
 
@@ -47,7 +90,7 @@ See more usage into the directory `app/`.
 Question: **How to create a new `page`**
 
 1. Add a new container component to `app/containers/`, some examples in `app/containers/` you can follow.
-2. Add a new route to `app/navigation/routes.js`.
+2. Add a new route to `app/navigation/index.js`.
 3. Refresh your app page
 
 Question: **How to debug app**
@@ -94,7 +137,6 @@ It's all
 
 1. Use ES7
 2. Two spaces instead of tab
-3. No state operations in your code
 
 ## Built with
 
