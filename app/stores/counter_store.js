@@ -19,7 +19,7 @@ class CounterStore {
   incrementAsync() {
     setTimeout(() => {
       this.counter++;
-      }, 500);
+    }, 0);
   }
 
   getFromRemote() {

@@ -6,20 +6,23 @@ import CounterScreen from '../containers/counter_screen'
 import CheckinScreen from '../containers/checkin_screen'
 import ThirdScreen from '../containers/third_screen'
 
-const WelcomeTab = StackNavigator({
-  WelcomeScreen: { screen: WelcomeScreen },
-  SecondScreen: { screen: SecondScreen },
-  CounterScreen: { screen: CounterScreen },
+// see here for options: https://reactnavigation.org/docs/navigators/tab
+const TabNavigation = TabNavigator({
+  HomeTab: { screen: WelcomeScreen },
+  CheckinTab: { screen: CheckinScreen },
+}, {
+  animationEnabled: false,
+  tabBarPosition: 'bottom',
+  swipeEnabled: false,
+  backBehavior: 'none',
 });
 
-const CheckinTab = StackNavigator({
-  CheckinScreen: { screen: CheckinScreen },
+// add your router below
+const Navigation = StackNavigator({
+  Main: { screen: TabNavigation },
+  SecondScreen: { screen: SecondScreen },
+  CounterScreen: { screen: CounterScreen },
   ThirdScreen: { screen: ThirdScreen },
-})
-
-const Navigation = TabNavigator({
-  Home: { screen: WelcomeTab },
-  Checkin: { screen: CheckinTab },
 });
 
 export default Navigation
