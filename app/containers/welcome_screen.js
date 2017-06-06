@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import Button from 'react-native-button'
 import { observer } from 'mobx-react/native'
@@ -18,7 +18,7 @@ export default class WelcomeScreen extends Component {
 
   render() {
     return (
-      <View style={[styles.container, ApplicationStyles.container]}>
+      <View style={[ApplicationStyles.container, styles.container]}>
         <Icon style={styles.welcome} name="home" size={30} />
         <Text style={styles.text} >
           Welcome to Mobx React Native Template

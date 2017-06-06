@@ -12,7 +12,7 @@ export default class ThirdScreen extends Component {
 
   render() {
     return (
-      <View style={[styles.container, ApplicationStyles.container]}>
+      <View style={[ApplicationStyles.container, styles.container]}>
         <Text style={styles.welcome}>
           Third Screen Container
         </Text>

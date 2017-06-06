@@ -17,7 +17,7 @@ export default class CheckinScreen extends Component {
 
   render() {
     return (
-      <View style={[styles.container, ApplicationStyles.container]}>
+      <View style={[ApplicationStyles.container, styles.container]}>
         <Text style={styles.welcome} >
           CheckinScreen
         </Text>
