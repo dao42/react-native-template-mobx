@@ -1,3 +1,4 @@
+# just an api example file
 require 'sinatra'
 
 get '/hello' do
